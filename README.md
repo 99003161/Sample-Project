@@ -1,6 +1,5 @@
-# kiranastore
+# Kirana Store Customer Accounts Management E-System
 
-Project Title : Kirana Store Customer Accounts Management E-System
 
 ![C/C++ CI](https://github.com/deepaksahoocvr/kiranastore/workflows/C/C++%20CI/badge.svg)
 
