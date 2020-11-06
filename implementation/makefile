@@ -10,7 +10,9 @@ src/kiranaProject.c\
 
 
 # All include folders with header files
-INC	= -Iinc
+INC	= -Iunity\
+-Iinc\
+-Itest
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
