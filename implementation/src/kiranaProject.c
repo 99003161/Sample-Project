@@ -28,7 +28,7 @@ void new_acc()
     int i,k;
     ptr=fopen("record.dat","a+");
     account_no:
-    system("cls");
+    //system("cls");
     printf("ADD RECORD");
     printf("\n\n\nEnter today's date(mm/dd/yyyy):");
     scanf("%d/%d/%d",&add.balance.month,&add.balance.day,&add.balance.year);
@@ -67,7 +67,7 @@ void new_acc()
     add_invalid:
     printf("\n\n\n\t\tEnter 1 to go to the main menu and 0 to exit:");
     scanf("%d",&main_exit);
-    system("cls");
+    //system("cls");
     if (main_exit==1)
         main();
     else if(main_exit==0)
@@ -83,7 +83,7 @@ void customers()
     FILE *view;
     view=fopen("record.dat","r");
     int test=0;
-    system("cls");
+    //system("cls");
     printf("\nACC. NO.\tNAME\t\t\tADDRESS\t\t\tPHONE\n");
 
     while(fscanf(view,"%d %s %d %s %lf %f %d/%d/%d\n",&add.acc_no,add.name,&add.age,add.address,&add.phone,&add.amt,&add.balance.month,&add.balance.day,&add.balance.year)!=EOF)
@@ -94,13 +94,13 @@ void customers()
 
     fclose(view);
     if (test==0)
-        {   system("cls");
+        {   //system("cls");
             printf("\nNO RECORDS!!\n");}
 
     view_list_invalid:
      printf("\n\nEnter 1 to go to the main menu and 0 to exit:");
         scanf("%d",&main_exit);
-        system("cls");
+        //system("cls");
         if (main_exit==1)
             main();
         else if(main_exit==0)
@@ -126,12 +126,12 @@ void update(void)
         {   test=1;
             printf("\nWhich information do you want to change?\n1.Address\n2.Phone\n\n\nEnter your choice(1 for address and 2 for phone):");
             scanf("%d",&choice);
-            system("cls");
+            //system("cls");
             if(choice==1)
                 {printf("Enter the new address:");
                 scanf("%s",upd.address);
                 fprintf(newrec,"%d %s %d %s %lf %f %d/%d/%d\n",add.acc_no,add.name,add.age,upd.address,add.phone,add.amt,add.balance.month,add.balance.day,add.balance.year);
-                system("cls");
+                //system("cls");
                 printf("Changes saved!");
                 }
             else if(choice==2)
@@ -139,7 +139,7 @@ void update(void)
                     printf("Enter the new phone number:");
                 scanf("%lf",&upd.phone);
                 fprintf(newrec,"%d %s %d %s %lf %f %d/%d/%d\n",add.acc_no,add.name,add.age,add.address,upd.phone,add.amt,add.balance.month,add.balance.day,add.balance.year);
-                system("cls");
+                //system("cls");
                 printf("Changes saved!");
                 }
 
@@ -153,12 +153,12 @@ void update(void)
     rename("new.dat","record.dat");
 
 if(test!=1)
-        {   system("cls");
+        {   //system("cls");
             printf("\nRecord not found!!\a\a\a");
             edit_invalid:
               printf("\nEnter 0 to try again,1 to return to main menu and 2 to exit:");
               scanf("%d",&main_exit);
-              system("cls");
+              //system("cls");
                  if (main_exit==1)
 
                     main();
@@ -173,7 +173,7 @@ if(test!=1)
     else
         {printf("\n\n\nEnter 1 to go to the main menu and 0 to exit:");
         scanf("%d",&main_exit);
-        system("cls");
+        //system("cls");
         if (main_exit==1)
             main();
         else
@@ -230,7 +230,7 @@ void payments(void)
        transact_invalid:
       printf("\n\n\nEnter 0 to try again,1 to return to main menu and 2 to exit:");
       scanf("%d",&main_exit);
-      system("cls");
+      //system("cls");
       if (main_exit==0)
         payments();
     else if (main_exit==1)
@@ -248,7 +248,7 @@ void payments(void)
    {
        printf("\nEnter 1 to go to the main menu and 0 to exit:");
         scanf("%d",&main_exit);
-        system("cls");
+       // system("cls");
         if (main_exit==1)
             main();
         else
@@ -298,7 +298,7 @@ void delete_acc(void)
     else
         {printf("\nEnter 1 to go to the main menu and 0 to exit:");
         scanf("%d",&main_exit);
-        system("cls");
+       // system("cls");
         if (main_exit==1)
             main();
         else
@@ -324,7 +324,7 @@ void display(void)
         while (fscanf(ptr,"%d %s %d %s %lf %f %d/%d/%d\n",&add.acc_no,add.name,&add.age,add.address,&add.phone,&add.amt,&add.balance.month,&add.balance.day,&add.balance.year)!=EOF)
         {
             if(add.acc_no==check.acc_no)
-            {   system("cls");
+            {   //system("cls");
                 test=1;
 
                 printf("\nAccount NO.:%d\nName:%s \nAge:%d \nAddress:%s \nPhone number:%.0lf \nAmount:$ %.2f \nDate Of update:%d/%d/%d\n\n",add.acc_no,add.name,add.age,add.address,add.phone,add.amt,add.balance.month,add.balance.day,add.balance.year);
@@ -339,7 +339,7 @@ void display(void)
         while (fscanf(ptr,"%d %s %d %s %lf %f %d/%d/%d\n",&add.acc_no,add.name,&add.age,add.address,&add.phone,&add.amt,&add.balance.month,&add.balance.day,&add.balance.year)!=EOF)
         {
             if(strcmpi(add.name,check.name)==0)
-            {   system("cls");
+            {   //system("cls");
                 test=1;
                 printf("\nAccount NO.:%d\nName:%s \nAge:%d \nAddress:%s \nPhone number:%.0lf \nAmount:$ %.2f \nDate Of update:%d/%d/%d\n\n",add.acc_no,add.name,add.age,add.address,add.phone,add.amt,add.balance.month,add.balance.day,add.balance.year);
 
@@ -350,12 +350,12 @@ void display(void)
 
     fclose(ptr);
      if(test!=1)
-        {   system("cls");
+        {   //system("cls");
             printf("\nRecord not found!!\a\a\a");
             see_invalid:
               printf("\nEnter 0 to try again,1 to return to main menu and 2 to exit:");
               scanf("%d",&main_exit);
-              system("cls");
+              //system("cls");
                  if (main_exit==1)
                     main();
                 else if (main_exit==2)
@@ -364,7 +364,7 @@ void display(void)
                     display();
                 else
                     {
-                        system("cls");
+                       // system("cls");
                         printf("\nInvalid!\a");
                         goto see_invalid;}
         }
@@ -373,14 +373,14 @@ void display(void)
         scanf("%d",&main_exit);}
         if (main_exit==1)
         {
-            system("cls");
+            //system("cls");
             main();
         }
 
         else
            {
 
-             system("cls");
+            // system("cls");
             close();
             }
 
