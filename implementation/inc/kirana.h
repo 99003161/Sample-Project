@@ -20,4 +20,6 @@ void customers();
 
 void close();
 
+float transact(int, float, float);
+
 #endif // KIRANA_H_INCLUDED
