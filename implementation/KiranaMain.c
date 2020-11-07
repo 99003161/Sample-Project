@@ -25,13 +25,13 @@ struct {
     int main()
 {
     int choice;
-    system("cls");
+    //system("cls");
     printf("\nDeepak's Kirana Store Customer Accounts Management E-System");
 
     printf("\n1.Create a new customer account\n2.Update information of an existing customer\n3.For Payments\n4.Check the details of an existing customer\n5.Removing an existing customer's account\n6.View customer's list\n7.Exit\n\n Enter your choice:");
     scanf("%d",&choice);
 
-    system("cls");
+    //system("cls");
     switch(choice)
     {
         case 1:new_acc();
