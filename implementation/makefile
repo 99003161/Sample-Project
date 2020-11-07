@@ -8,6 +8,10 @@ BUILD = build
 SRC = KiranaMain.c\
 src/kiranaProject.c\
 
+TEST_SRC = src/kiranaProject.c\
+test/test_kirana.c
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
 INC	= -Iunity\
