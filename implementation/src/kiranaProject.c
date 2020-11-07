@@ -391,3 +391,17 @@ void close(void)
 {
     printf("\n\nThank you!");
     }
+float transact(int i, float j, float k)
+{
+
+    if(i==1)
+    {
+
+        return j+k;
+    }
+    else
+    {
+
+        return k-j;
+    }
+}
